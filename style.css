@@ -1,15 +1,148 @@
+
+
+
+
+/* Section 1 styles */
 body {
-    background-color: darkblue;
-    font-family: system-ui;
+  background-color: darkblue;
+  font-family: system-ui;
 }
 .top-banner {
-    text-align: center;
-    margin-top: 50px;
-    font-size: 40px;
+  text-align: center;
+  margin-top: 50px;
+  color: white;
 }
-input,button {
-    
+.heading{
+  font-size: 4rem;
 }
-.heading {
-    color: white;
+.top-banner form input {
+font-size: 2rem;
+border-width: 0px;
+height: 40px;
+padding: 5px 5px 10px;
+border-bottom: 1px solid;
+outline: none;
+}
+.top-banner form input::placeholder {
+color: currentColor;
+font-size: 2rem;
+}
+.top-banner form button {
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 15px 20px;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+}
+.top-banner form .msg {
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  max-width: 450px;
+  min-height: 40px;
+}
+
+@media screen and (max-width: 700px) {
+.top-banner form {
+  display: flex;
+  flex-direction: column;
+}
+ 
+.top-banner form input,
+.top-banner form button {
+  width: 100%;
+}
+
+.top-banner form button {
+  margin: 20px 0 0 0;
+}
+ 
+.top-banner form .msg {
+  position: static;
+  max-width: none;
+  min-height: 0;
+  margin-top: 10px;
+}
+}
+
+/* Section 2 styles */
+.ajax-section {
+margin: 50px 0 20px;
+}
+
+.ajax-section .cities {
+display: grid;
+grid-gap: 32px 20px;
+grid-template-columns: repeat(4, 1fr);
+}
+
+@media screen and (max-width: 1000px) { 
+.ajax-section .cities {
+  grid-template-columns: repeat(3, 1fr);
+}
+}
+
+@media screen and (max-width: 700px) {
+.ajax-section .cities {
+  grid-template-columns: repeat(2, 1fr);
+}
+}
+
+@media screen and (max-width: 500px) {  
+.ajax-section .cities {
+  grid-template-columns: repeat(1, 1fr);
+}
+}
+
+/* Section 3 styles */
+.ajax-section .city {
+position: relative;
+padding: 40px 10%;
+border-radius: 20px;
+background: white;
+color: #53627c;
+}
+
+.ajax-section .city::after {
+content: ’’;
+width: 90%;
+height: 50px;
+position: absolute;
+bottom: -12px;
+left: 5%;
+z-index: -1;
+opacity: 0.3;
+border-radius: 20px;
+background: white;
+}
+
+.ajax-section figcaption {
+margin-top: 10px;
+text-transform: uppercase;
+letter-spacing: 0.05em;
+}
+
+.ajax-section .city-temp {
+font-size: 5rem;
+font-weight: bold;
+margin-top: 10px;
+color: #042f94;
+}
+
+.ajax-section .city sup {
+font-size: 0.5em;
+}
+
+.ajax-section .city-name sup {
+padding: 0.2em 0.6em;
+border-radius: 30px;
+color: white;
+background: #ff8c00;
+}
+
+.ajax-section .city-icon {
+margin-top: 10px;
+width: 100px;
+height: 100px;
 }
